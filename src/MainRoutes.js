@@ -42,22 +42,32 @@ const MainRoutes = () => {
     {
       path: "/clothes",
       element: <ClothesPage />,
-      id: 5,
+      id: 6,
     },
     {
       path: "/electronics",
       element: <ElectronicsPage />,
-      id: 5,
+      id: 7,
     },
     {
       path: "/edit/:id",
       element: <CardEditPage />,
-      id: 6,
+      id: 8,
     },
     {
       path: "/add",
       element: <AddProductPage />,
-      id: 7,
+      id: 9,
+    },
+    {
+      path: "/login",
+      element: <MainPage />,
+      id: 11,
+    },
+    {
+      path: "/register",
+      element: <MainPage />,
+      id: 12,
     },
   ];
 

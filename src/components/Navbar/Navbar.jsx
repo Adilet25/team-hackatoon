@@ -22,30 +22,79 @@ import { useNavigate } from "react-router-dom";
 import StorefrontSharpIcon from "@mui/icons-material/StorefrontSharp";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
+// const pages = [
+//   {
+//     type: "Products",
+//     path: "/products",
+//     id: 1,
+//   },
+//   {
+//     type: "Sport",
+//     path: "/sport",
+//     id: 2,
+//   },
+//   {
+//     type: "Clothes",
+//     path: "/clothes",
+//     id: 3,
+//   },
+//   {
+//     type: "Electronics",
+//     path: "/electronics",
+//     id: 4,
+//   },
+// ];
+
+// const settings = [
+//   {
+//     type: "Register",
+//     path: "/register",
+//     id: 1,
+//   },
+//   {
+//     type: "Login",
+//     path: "/login",
+//     id: 2,
+//   },
+// ];
+
+// const pages = ["Products", "Sport", "Clothes", "Electronics"];
+
 const pages = [
   {
     type: "Products",
     path: "/products",
-    id: "products1",
+    id: 1,
   },
   {
     type: "Sport",
     path: "/sport",
-    id: "sport2",
+    id: 2,
   },
   {
     type: "Clothes",
     path: "/clothes",
-    id: "clothes3",
+    id: 3,
   },
   {
     type: "Electronics",
     path: "/electronics",
-    id: "elec4",
+    id: 4,
   },
 ];
-// const pages = ["Products", "Sport", "Clothes", "Electronics"];
-const settings = ["Register", "Login", "Logout"];
+
+const settings = [
+  {
+    type: "Register",
+    path: "/register",
+    id: 1,
+  },
+  {
+    type: "login",
+    path: "/login",
+    id: 2,
+  },
+];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -81,7 +130,7 @@ function ResponsiveAppBar() {
   }
 
   const [searchParams, setSearchParams] = useSearchParams();
-  const [search, setSearch] = useState(searchParams.get("q"));
+  const [search, setSearch] = useState(searchParams.get("q") || "");
 
   useEffect(() => {
     render();
@@ -148,7 +197,7 @@ function ResponsiveAppBar() {
                 display: { xs: "block", md: "none" },
               }}>
               {pages.map(page => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                <MenuItem key={page.id} onClick={handleCloseNavMenu}>
                   <Typography
                     textAlign="center"
                     onClick={() => navigate(page)}></Typography>
@@ -180,7 +229,7 @@ function ResponsiveAppBar() {
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map(page => (
               <Button
-                key={page}
+                key={page.id}
                 onClick={() => navigate(page.path)}
                 sx={{ my: 2, color: "white", display: "block" }}>
                 {page.type}
@@ -223,8 +272,12 @@ function ResponsiveAppBar() {
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}>
               {settings.map(setting => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
+                <MenuItem key={setting.id} onClick={handleCloseUserMenu}>
+                  <Typography
+                    textAlign="center"
+                    onClick={() => navigate(setting.path)}>
+                    {setting.type}
+                  </Typography>
                 </MenuItem>
               ))}
             </Menu>

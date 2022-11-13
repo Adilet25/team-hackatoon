@@ -3,18 +3,10 @@
     {
       "name": "MacBook Pro 16",
       "description": "10-ядерный процессор 32-ядерный графический процессор 16-ядерная система Neural Engine 64 ГБ объединённой памяти SSD-накопитель 2 ТБ Дисплей Liquid Retina XDR 16 дюймов Три порта Thunderbolt 4 Порт HDMI Слот для карт SDXC Разъём питания MagSafe 3 Клавиатура Magic Keyboard с Touch ID Трекпад Force Touch Адаптер питания USB-C 140 Вт",
-      "price": 550,
+      "price": 400,
       "picture": "https://www.istore.kg/media/products/Pro-16-M1-SP-US-1_hZ4eLKK.webp",
       "type": "electronics",
       "id": 1
-    },
-    {
-      "name": "MacBook Pro 14",
-      "description": "10-ядерный процессор 16-ядерный графический процессор 16-ядерная система Neural Engine 32 ГБ объединённой памяти SSD-накопитель 1 ТБ Дисплей Liquid Retina XDR 14 дюймов Три порта Thunderbolt 4 Порт HDMI Слот для карт SDXC Разъём питания MagSafe 3 Клавиатура Magic Keyboard с Touch ID Трекпад Force Touch Адаптер питания USB-C 96 Вт",
-      "price": 3200,
-      "picture": "https://www.istore.kg/media/products/Pro-14-M1-Silver-US-1_lzqer6g.webp",
-      "type": "electronics",
-      "id": 2
     },
     {
       "name": "MacBook Pro 13",
@@ -241,14 +233,6 @@
       "id": 30
     },
     {
-      "name": "fēnix® 7X – Sapphire Solar Edition",
-      "description": "Батарея с подзарядкой от солнца,Карты TopoActive,Встроенный фонарик,Выносливость в реальном времени",
-      "price": 1100,
-      "picture": "hhttps://www.istore.kg/media/products/fenix-7x-sapphire-solar-edition-black-dlc-1.webp",
-      "type": "electronics",
-      "id": 31
-    },
-    {
       "name": "fēnix® 7 – Sapphire Solar Edition",
       "description": "Батарея с подзарядкой от солнца,Карты TopoActive,Встроенный фонарик,Выносливость в реальном времени",
       "price": 1050,
@@ -273,14 +257,6 @@
       "id": 34
     },
     {
-      "name": "fēnix® 6 Pro – Standard Edition",
-      "description": "Узнай больше, благодаря Pulse Ox,Отслеживание статистики,Умная навигация,Подготовка к следующему старту",
-      "price": 620,
-      "picture": "hhttps://www.istore.kg/media/products/fenix-6-pro-black.webp",
-      "type": "electronics",
-      "id": 35
-    },
-    {
       "name": "Garmin Forerunner® 945 Blue Bundle ",
       "description": "Часы премиум-класса для бега/триатлона с GPS и музыкой. Синхронизация с премиальными музыкальными сервисами или хранение до 1000 песен на устройстве и подключение к наушникам (продаются отдельно) с технологией Bluetooth® для прослушивания музыки без телефона",
       "price": 780,
@@ -300,7 +276,7 @@
       "name": "Garmin Forerunner® 935",
       "description": "Мультиспортивные часы с GPS/ГЛОНАСС и встроенным оптическим пульсометром. Вес часов всего 49 грамм. Мультиспортивные профили, в том числе триатлон, бег/плавание. Подходят для ежедневного ношения. Мониторинг 24/7: шаги, калории, пульс, сон. Встроенный барометр и альтиметр для отслеживания изменений высоты, а также электронный компас для определения азимута",
       "price": 390,
-      "picture": "hhttps://www.istore.kg/media/products/935-1.webp",
+      "picture": "https://www.istore.kg/media/products/935-1.webp",
       "type": "electronics",
       "id": 38
     },
@@ -676,7 +652,7 @@
       "name": "Polo shirt",
       "description": "POSITIVELY CONSCIOUS: We've partnered with Good On You — an ethical agency that rates how sustainably brands perform across various people, planet and animal welfare criteria.",
       "price": 125,
-      "picture": "https://cdn-images.farfetch-contents.com/17/99/90/85/125.jpg",
+      "picture": "https://cdn.shopify.com/s/files/1/0101/1145/1195/products/plain-poloshirt-aquablue.png?v=1594093924",
       "type": "clothes",
       "id": 87
     },

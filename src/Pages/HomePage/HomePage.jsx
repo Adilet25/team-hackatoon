@@ -1,56 +1,77 @@
-import React from "react";
-import { useLocation, useNavigate } from "react-router-dom";
-import { useState, useEffect } from "react";
-import axios from "axios";
-import { useCart } from "../../components/Cart/CartContextProvider";
-import { TextField } from "@mui/material";
-import { useSearchParams } from "react-router-dom";
+// import React from "react";
+// import { useLocation, useNavigate } from "react-router-dom";
+// import { useState, useEffect } from "react";
+// import axios from "axios";
+// import { useCart } from "../../components/Cart/CartContextProvider";
+// import { TextField } from "@mui/material";
+// import { useSearchParams } from "react-router-dom";
+// import { useAutho } from "../../components/Authorization/AuthoConetextProvider";
+// import { ClassNames } from "@emotion/react";
 
-const HomePage = () => {
-  const API = " http://localhost:8000/products";
-  const [products, setProducts] = useState([]);
-  const { addProductToCart } = useCart();
+// const HomePage = () => {
+//   const API = " http://localhost:8000/products";
 
-  const navigate = useNavigate();
-  //временный render продуктов!
+//   const USERS_API = "http://localhost:8001/users";
 
-  async function render() {
-    let { data } = await axios(`${API}/${window.location.search}`);
-    setProducts([...data]);
-  }
+//   const [products, setProducts] = useState([]);
+//   const { addProductToCart } = useCart();
 
-  // функционал живого поиска (временно будет здесь)
-  const [searchParams, setSearchParams] = useSearchParams();
-  const [search, setSearch] = useState(searchParams.get("q"));
+//   const { oneUserFromLs, getUserFromLs, logout, deleteAccount } = useAutho();
 
-  useEffect(() => {
-    render();
-  }, [searchParams]);
+//   const navigate = useNavigate();
+//   //временный render продуктов!
 
-  useEffect(() => {
-    setSearchParams({
-      q: search,
-    });
-  }, [search]);
+//   async function render() {
+//     let { data } = await axios(`${API}/${window.location.search}`);
+//     setProducts([...data]);
+//   }
 
-  return (
-    <>
-      <TextField
-        type="text"
-        onChange={e => setSearch(e.target.value)}
-        value={search}
-        required
-      />
-      <button onClick={() => navigate("/cart")}>Visit cart</button>
+//   // функционал живого поиска (временно будет здесь)
+//   const [searchParams, setSearchParams] = useSearchParams();
+//   const [search, setSearch] = useState(searchParams.get("q"));
+//   const [userFromLs, setUserFromLs] = useState([]);
+// //
+//   useEffect(() => {
+//     render();
+//   }, [searchParams]);
 
-      {products.map(item => (
-        <h2 key={item.id}>
-          {item.name}{" "}
-          <button onClick={() => addProductToCart(item)}>Add to CArt</button>
-        </h2>
-      ))}
-    </>
-  );
-};
+//   useEffect(() => {
+//     setSearchParams({
+//       q: search,
+//     });
+//   }, [search]);
+//   useEffect(() => {
+//     getUserFromLs();
+//   }, []);
 
-export default HomePage;
+//   return (
+//     <>
+//       <TextField
+//         type="text"
+//         onChange={e => setSearch(e.target.value)}
+//         value={search}
+//         // required
+//       />
+//       <h1>{oneUserFromLs && oneUserFromLs.name[0]}</h1>
+//       <button onClick={() => navigate("/register")}>Registration page!</button>
+//       <button onClick={() => navigate("/login")}>Login page!</button>
+//       <br />
+
+//       <button onClick={() => logout()}>Logout</button>
+//       <button onClick={() => deleteAccount(oneUserFromLs && oneUserFromLs.id)}>
+//         delete account
+//       </button>
+
+//       <button onClick={() => navigate("/cart")}>Visit cart</button>
+
+//       {products.map(item => (
+//         <h2 key={item.id}>
+//           {item.name}
+//           <button onClick={() => addProductToCart(item)}>Add to CArt</button>
+//         </h2>
+//       ))}
+//     </>
+//   );
+// };
+
+// export default HomePage;

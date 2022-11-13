@@ -1,4 +1,4 @@
-import * as React from "react";
+// import * as React from "react";
 import { styled, alpha } from "@mui/material/styles";
 import InputBase from "@mui/material/InputBase";
 import SearchIcon from "@mui/icons-material/Search";
@@ -14,28 +14,33 @@ import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-import AdbIcon from "@mui/icons-material/Adb";
-import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
+import { useSearchParams } from "react-router-dom";
+import axios from "axios";
+import React, { useState, useEffect } from "react";
+import "../../styles/Navbar.css";
+import { useNavigate } from "react-router-dom";
+import StorefrontSharpIcon from "@mui/icons-material/StorefrontSharp";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
-// const pages = [
-//   {
-//       type: 'Products',
-//       path: '/products'
-//   },
-//   {
-//       type: 'Sport',
-//       path: '/Sport'
-//   },
-//   {
-//       type: 'Clothes',
-//       path: '/Clothes'
-//   },
-//   {
-//       type: 'Electronics',
-//       path: '/Electronics'
-//   }
-// ];
-const pages = ["Products", "Sport", "Clothes", "Electronics"];
+const pages = [
+  {
+    type: "Products",
+    path: "/products",
+  },
+  {
+    type: "Sport",
+    path: "/sport",
+  },
+  {
+    type: "Clothes",
+    path: "/clothes",
+  },
+  {
+    type: "Electronics",
+    path: "/electronics",
+  },
+];
+// const pages = ["Products", "Sport", "Clothes", "Electronics"];
 const settings = ["Register", "Login", "Logout"];
 
 function ResponsiveAppBar() {
@@ -57,69 +62,59 @@ function ResponsiveAppBar() {
     setAnchorElUser(null);
   };
 
-  const Search = styled("div")(({ theme }) => ({
-    position: "relative",
-    borderRadius: theme.shape.borderRadius,
-    backgroundColor: alpha(theme.palette.common.white, 0.15),
-    "&:hover": {
-      backgroundColor: alpha(theme.palette.common.white, 0.25),
-    },
-    marginLeft: 0,
-    width: "100%",
-    [theme.breakpoints.up("sm")]: {
-      marginLeft: theme.spacing(1),
-      width: "auto",
-    },
-  }));
+  // const { fetchByParams } = useProducts();
 
-  const SearchIconWrapper = styled("div")(({ theme }) => ({
-    padding: theme.spacing(0, 2),
-    height: "100%",
-    position: "absolute",
-    pointerEvents: "none",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-  }));
+  //custom
 
-  const StyledInputBase = styled(InputBase)(({ theme }) => ({
-    color: "inherit",
-    "& .MuiInputBase-input": {
-      padding: theme.spacing(1, 1, 1, 0),
-      // vertical padding + font size from searchIcon
-      paddingLeft: `calc(1em + ${theme.spacing(4)})`,
-      transition: theme.transitions.create("width"),
-      width: "100%",
-      [theme.breakpoints.up("sm")]: {
-        width: "12ch",
-        "&:focus": {
-          width: "20ch",
-        },
-      },
-    },
-  }));
+  const navigate = useNavigate();
+
+  const API = " http://localhost:8000/products";
+  const [products, setProducts] = useState([]);
+
+  async function render() {
+    let { data } = await axios(`${API}/${window.location.search}`);
+    setProducts([...data]);
+  }
+
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [search, setSearch] = useState(searchParams.get("q"));
+
+  useEffect(() => {
+    render();
+  }, [searchParams]);
+
+  useEffect(() => {
+    setSearchParams({
+      q: search,
+    });
+  }, [search]);
+
   return (
     <AppBar
       position="static"
       style={{ backgroundColor: "#FFFBFB", color: "#544856" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
+          <StorefrontSharpIcon
+            sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}
+          />
           <Typography
             variant="h6"
             noWrap
-            component="a"
-            href="/"
+            component="button"
+            // href="/?q="
+            className="buttonHome-link"
+            onClick={() => navigate("/")}
             sx={{
               mr: 2,
               display: { xs: "none", md: "flex" },
-              fontFamily: "monospace",
+              fontFamily: "Jost",
               fontWeight: 700,
               letterSpacing: ".3rem",
               color: "inherit",
               textDecoration: "none",
             }}>
-            LOGO
+            Online Store
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
@@ -150,12 +145,16 @@ function ResponsiveAppBar() {
               }}>
               {pages.map(page => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                  <Typography
+                    textAlign="center"
+                    onClick={() => navigate(page)}></Typography>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
+          <StorefrontSharpIcon
+            sx={{ display: { xs: "flex", md: "none" }, mr: 1 }}
+          />
           <Typography
             variant="h5"
             noWrap
@@ -171,37 +170,33 @@ function ResponsiveAppBar() {
               color: "inherit",
               textDecoration: "none",
             }}>
-            LOGO
+            Online Store
           </Typography>
-          <Box
-            sx={{
-              flexGrow: 1,
-              display: { xs: "none", md: "flex" },
-            }}
-            style={{ color: "#431969" }}>
+          {/* Navigate Buttons */}
+          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map(page => (
               <Button
-                key={page}
-                onClick={handleCloseNavMenu}
+                key={page.type}
+                onClick={() => navigate(page.path)}
                 sx={{ my: 2, color: "white", display: "block" }}>
-                {page}
+                {page.type}
               </Button>
             ))}
           </Box>
-          <Search
-            style={{
-              marginRight: "50px",
-              backgroundColor: "#544856",
-              color: "white",
-            }}>
-            <SearchIconWrapper>
-              <SearchIcon />
-            </SearchIconWrapper>
-            <StyledInputBase
-              placeholder="Search…"
-              inputProps={{ "aria-label": "search" }}
+
+          {/* Search Box */}
+          <Box className="searchBlock">
+            <SearchIcon />
+            <input
+              className="inputSearch"
+              type="text"
+              onChange={e => setSearch(e.target.value)}
+              value={search}
+              required
+              placeholder="Search"
             />
-          </Search>
+          </Box>
+          {/* Profile Icon */}
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
@@ -230,11 +225,12 @@ function ResponsiveAppBar() {
               ))}
             </Menu>
           </Box>
+          {/* Cart Icon */}
           <Box style={{ color: "#431969", marginLeft: "50px" }}>
             <Button
-              onClick={handleCloseNavMenu}
+              onClick={() => navigate("/cart")}
               sx={{ my: 2, color: "white", display: "block" }}>
-              <AddShoppingCartIcon />
+              <ShoppingCartIcon />
             </Button>
           </Box>
         </Toolbar>

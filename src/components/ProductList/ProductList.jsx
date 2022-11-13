@@ -26,7 +26,7 @@ const ProductList = () => {
 
   useEffect(() => {
     render();
-  }, [products]);
+  }, []);
 
   return (
     <>

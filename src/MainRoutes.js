@@ -9,6 +9,7 @@ import SportPage from "./pages/SportPage";
 import ClothesPage from "./pages/ClothesPage";
 import ElectronicsPage from "./pages/ElectronicsPage";
 import CardEditPage from "./pages/CardEditPage";
+import AddProductPage from "./pages/AddProductPage";
 
 const MainRoutes = () => {
   const ALL_ROUTES = [
@@ -52,6 +53,11 @@ const MainRoutes = () => {
       path: "/edit/:id",
       element: <CardEditPage />,
       id: 6,
+    },
+    {
+      path: "/add",
+      element: <AddProductPage />,
+      id: 7,
     },
   ];
 

@@ -1,7 +1,8 @@
 import React from "react";
+import EditProduct from "../components/EditProduct/EditProduct";
 
 const CardEditPage = () => {
-  return <div>CardEditPage</div>;
+  return <EditProduct />;
 };
 
 export default CardEditPage;

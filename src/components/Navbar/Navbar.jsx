@@ -26,18 +26,22 @@ const pages = [
   {
     type: "Products",
     path: "/products",
+    id: "products1",
   },
   {
     type: "Sport",
     path: "/sport",
+    id: "sport2",
   },
   {
     type: "Clothes",
     path: "/clothes",
+    id: "clothes3",
   },
   {
     type: "Electronics",
     path: "/electronics",
+    id: "elec4",
   },
 ];
 // const pages = ["Products", "Sport", "Clothes", "Electronics"];
@@ -176,7 +180,7 @@ function ResponsiveAppBar() {
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map(page => (
               <Button
-                key={page.type}
+                key={page}
                 onClick={() => navigate(page.path)}
                 sx={{ my: 2, color: "white", display: "block" }}>
                 {page.type}

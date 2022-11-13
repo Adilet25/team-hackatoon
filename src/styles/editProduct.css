@@ -1,0 +1,101 @@
+.productDetails_main-block {
+  display: flex;
+  justify-content: center;
+}
+
+.editProduct_block {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2%;
+  width: 90vw;
+  box-shadow: 0px 0px 20px grey;
+  border-radius: 25px;
+  align-items: center;
+}
+
+.editProduct_info-block {
+  display: flex;
+  flex-direction: row;
+}
+
+.editProduct_oldInfo-block {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2%;
+  max-width: 40vw;
+}
+
+.editProduct_showNew {
+  display: flex;
+  flex-direction: row;
+}
+
+.editInput {
+  margin-top: 2%;
+  width: 8rem;
+  height: 2rem;
+  border-radius: 20px;
+  border-color: none;
+  border-style: hidden;
+  padding: 2% 15%;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: 1s;
+  background-color: white;
+  color: black;
+}
+
+.editInput:focus {
+  transition: 1s;
+  background-color: #686868;
+  color: white;
+  font-weight: 500;
+}
+
+.editInput_save-button {
+  width: 15%;
+  height: 3rem;
+  margin-top: 1.4rem;
+  margin-bottom: 2rem;
+  border-radius: 25px;
+  font-size: 1.2rem;
+  border-style: none;
+  letter-spacing: 2px;
+  background-color: #e0e3e6;
+  transition: 0.5s;
+}
+.editInput_save-button:hover {
+  border-style: solid;
+  background-color: #544856;
+  color: white;
+  transition: 0.7s;
+}
+
+/* .productDetails_info {
+  margin-top: 1%;
+  margin-left: 2%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+} */
+
+/* .productDetails_info2 {
+  margin-left: 5%;
+  margin-top: 2%;
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.productDetails_name {
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+} */
+
+.editProduct_img {
+  height: 30rem;
+  width: 30rem;
+}

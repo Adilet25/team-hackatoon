@@ -22,6 +22,7 @@ import StorefrontSharpIcon from "@mui/icons-material/StorefrontSharp";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { useAutho } from "../Authorization/AuthoConetextProvider";
 import { Logout } from "@mui/icons-material";
+import { useProducts } from "../../context/ProductContextProvider";
 
 const pages = [
   {
@@ -59,9 +60,11 @@ const settings = [
   },
 ];
 
-function ResponsiveAppBar() {
+function ResponsiveAppBar({ setPage }) {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
+
+  // const [page, setPage] = useState(1);
 
   const handleOpenNavMenu = event => {
     setAnchorElNav(event.currentTarget);
@@ -88,14 +91,20 @@ function ResponsiveAppBar() {
   const [products, setProducts] = useState([]);
 
   const { oneUserFromLs, getUserFromLs, logout, deleteAccount } = useAutho();
+  const { getProducts } = useProducts();
 
-  async function render() {
-    let { data } = await axios(`${API}/${window.location.search}`);
-    setProducts([...data]);
-  }
+  // async function render() {
+  //   let { data } = await axios(`${API}/${window.location.search}`);
+  //   setProducts([...data]);
+  // }
 
   const [searchParams, setSearchParams] = useSearchParams();
   const [search, setSearch] = useState(searchParams.get("q") || "");
+
+  useEffect(() => {
+    getProducts();
+    console.log("efehfiu");
+  }, [searchParams]);
 
   useEffect(() => {
     setSearchParams({
@@ -104,16 +113,19 @@ function ResponsiveAppBar() {
   }, [search]);
 
   useEffect(() => {
-    render();
-  }, [searchParams]);
-
-  useEffect(() => {
     getUserFromLs();
   }, []);
+
+  // useEffect(() => {
+  //   render();
+  // }, [search]);
   // console.log(oneUserFromLs.name[0]);
 
   return (
     <AppBar
+      data-aos="fade-down"
+      data-aos-easing="linear"
+      data-aos-duration="1500"
       position="static"
       style={{ backgroundColor: "#FFFBFB", color: "#544856" }}>
       <Container maxWidth="xl">

@@ -1,172 +1,12 @@
 {
   "products": [
     {
-      "name": "MacBook Pro 16",
-      "description": "10-ядерный процессор 32-ядерный графический процессор 16-ядерная система Neural Engine 64 ГБ объединённой памяти SSD-накопитель 2 ТБ Дисплей Liquid Retina XDR 16 дюймов Три порта Thunderbolt 4 Порт HDMI Слот для карт SDXC Разъём питания MagSafe 3 Клавиатура Magic Keyboard с Touch ID Трекпад Force Touch Адаптер питания USB-C 140 Вт",
-      "price": 400,
-      "picture": "https://www.istore.kg/media/products/Pro-16-M1-SP-US-1_hZ4eLKK.webp",
-      "type": "electronics",
-      "id": 1
-    },
-    {
-      "name": "MacBook Pro 13",
-      "description": "8-ядерный процессор 10-ядерный графический процессор 16-ядерная система Neural Engine 8 ГБ объединённой памяти SSD-накопитель 256 ГБ Дисплей Retina 13 дюймов Два порта Thunderbolt 4 Magic Keyboard Touch Bar и Touch ID Трекпад Force Touch Адаптер питания USB-C 67 Вт",
-      "price": 1500,
-      "picture": "https://www.istore.kg/media/products/mbp-spacegray-gallery1-202206.webp",
-      "type": "electronics",
-      "id": 3
-    },
-    {
-      "name": "MacBook Air 13",
-      "description": "8-ядерный процессор 10-ядерный графический процессор 16-ядерная система Neural Engine 8 ГБ объединённой памяти SSD-накопитель 512 ГБ Liquid Retina 13.6 дюймов Камера FaceTime 1080p Два порта Thunderbolt 4 Порт MagSafe 3 Magic Keyboard with Touch ID Адаптер питания USB-C 35 Вт",
-      "price": 1900,
-      "picture": "https://www.istore.kg/media/products/macbook-air-midnight-gallery1-20220606_uai9Xx3.webp",
-      "type": "electronics",
-      "id": 4
-    },
-    {
-      "name": "Mac mini",
-      "description": "Чип Apple M1 с 8‑ядерным процессором, 8‑ядерным графическим процессором и 16‑ядерной системой Neural Engine 8 ГБ объединённой памяти SSD‑накопитель 256 ГБ Порт Gigabit Ethernet",
-      "price": 1900,
-      "picture": "https://www.istore.kg/media/products/mini-intel-1.webp",
-      "type": "electronics",
-      "id": 5
-    },
-    {
-      "name": "Mac Studio",
-      "description": "20-ядерный процессор 48-ядерный графический процессор 32-ядерная система Neural Engine 64 ГБ объединённой памяти SSD-накопитель 1 ТБ Front: Два порта Thunderbolt4,  Слот для карт SDXC Back: Четыре порта Thunderbolt4 Два порта USB-A 10-гигабитный Ethernet порт Порт HDMI Разъём для наушников 3.5 мм",
-      "price": 5200,
-      "picture": "https://www.istore.kg/media/products/mac-studio-202203-gallery-3.webp",
-      "type": "electronics",
-      "id": 6
-    },
-    {
-      "name": "Studio Display",
-      "description": "Потрясающий 27-дюймовый дисплей Retina 5K, и миллиард цветов. Ультраширокая камера 12 МП с функцией 'В центре внимания' Три микрофона студийного качества и звуковая система с шестью динамиками и функцией Spatial Audio. Порты для подключения и зарядки",
-      "price": 2000,
-      "picture": "https://www.istore.kg/media/products/studio-display-1.webp",
-      "type": "electronics",
-      "id": 7
-    },
-    {
-      "name": "iPhone 13 Pro Max",
-      "description": "Потрясающий 27-дюймовый дисплей Retina 5K, и миллиард цветов. Ультраширокая камера 12 МП с функцией 'В центре внимания' Три микрофона студийного качества и звуковая система с шестью динамиками и функцией Spatial Audio. Порты для подключения и зарядки",
-      "price": 1250,
-      "picture": "https://www.istore.kg/media/products/iphone-13-pro-max-green-select.webp",
-      "type": "electronics",
-      "id": 8
-    },
-    {
-      "name": "iPhone 11",
-      "description": "12-Мп фронтальная камера TrueDepth с режимом портрета, видео 4K и slo-mo,Чип A13 Bionic с 4-ядерным графическим процессором,6,1-дюймовый дисплей Liquid Retina HD,Дисплей из прочного стекла, торцы из алюминия",
-      "price": 580,
-      "picture": "https://www.istore.kg/media/products/11-black_qdkqJZQ.webp",
-      "type": "electronics",
-      "id": 9
-    },
-    {
-      "name": "Studio Display",
-      "description": "Потрясающий 27-дюймовый дисплей Retina 5K, и миллиард цветов. Ультраширокая камера 12 МП с функцией 'В центре внимания' Три микрофона студийного качества и звуковая система с шестью динамиками и функцией Spatial Audio. Порты для подключения и зарядки",
-      "price": 2000,
-      "picture": "https://www.istore.kg/media/products/studio-display-1.webp",
-      "type": "electronics",
-      "id": 10
-    },
-    {
-      "name": "iPhone 12",
-      "description": "Потрясающий 27-дюймовый дисплей Retina 5K, и миллиард цветов. Ультраширокая каУсовершенствованная система с двумя камерами и записью Dolby Vision HDR,Сверхмощный чип A14 Bionic с 4-ядерным GPU,6,1-дюймовый дисплей Super Retina XDR с True Tone,Дисплей Ceramic Shield прочнее, чем любое стекло смартфона",
-      "price": 650,
-      "picture": "https://www.istore.kg/media/products/12-Black.webp",
-      "type": "electronics",
-      "id": 11
-    },
-    {
-      "name": "Mac Mini(M1,2020)",
-      "description": "Чип Apple M1 с 8-ядерным процессором, 8-ядерным графическим процессором и 16-ядерной системой Neural Engine 8 ГБ объединённой памяти SSD-накопитель 256 ГБ Порт Gigabit Ethernet",
-      "price": 790,
-      "picture": "https://www.istore.kg/media/products/mini-m1-1_ioi2c2Q.webp",
-      "type": "electronics",
-      "id": 12
-    },
-    {
-      "name": "Mac mini (Intel, 2018)",
-      "description": "Процессор 3,6 ГГц, 4‑ядерный, Intel Core i3 8‑го поколения, с графическим процессором Intel UHD Graphics 630,8 ГБ  памяти,SSD‑накопитель 256 ГБ,Порт Gigabit Ethernet",
-      "price": 600,
-      "picture": "https://www.istore.kg/media/products/mini-intel-1.webp",
-      "type": "electronics",
-      "id": 13
-    },
-    {
-      "name": "Watch Series 7 with Stainless Steel Case",
-      "description": "На сегодняшний день, это самый большой дисплей Always-On Retina,Дисплей устойчив к царапинам, а также пыле-влагозащищенный,Датчик измерения уровня кислорода в крови,Сделайте ЭКГ, в любое время и в любом месте",
-      "price": 850,
-      "picture": "https://www.istore.kg/media/products/stainless-graphite-41.webp",
-      "type": "electronics",
-      "id": 14
-    },
-    {
-      "name": "Watch Series 7 Nike with Aluminum Case",
-      "description": "Ремешки Nike и эксклюзивные циферблаты, а также приложения Nike Run Club,На сегодняшний день, это самый большой дисплей Always-On Retina,Дисплей устойчив к царапинам, а также пыле-влагозащищенный,Измерьте уровень кислорода в крови, и проверьте сердечный ритм с помощью приложения ЭКГ",
-      "price": 430,
-      "picture": "https://www.istore.kg/media/products/7-41-Nike-Starlight-GPS.webp",
-      "type": "electronics",
-      "id": 15
-    },
-    {
-      "name": "Watch Series 7 with Aluminum Case",
-      "description": "На сегодняшний день, это самый большой дисплей Always-On Retina,Датчик измерения уровня кислорода в крови,Дисплей устойчив к царапинам, а также пыле-влагозащищенный,Сделайте ЭКГ, в любое время и в любом месте",
-      "price": 420,
-      "picture": "https://www.istore.kg/media/products/7-41-Green-GPS.webp",
-      "type": "electronics",
-      "id": 16
-    },
-    {
-      "name": "Watch Series 6 Nike with Aluminum Case",
-      "description": "Ремешки Nike и эксклюзивные циферблаты, а также приложения Nike Run Club,Невероятный дисплей Always-On Retina на 40 и 44мм,Дисплей устойчив к царапинам, а также пыле-влагозащищенный,Измерьте уровень кислорода в крови, и проверьте сердечный ритм с помощью приложения ЭКГ",
-      "price": 420,
-      "picture": "https://www.istore.kg/media/products/SE-Nike-40-GPS-Anthracite-Black.webp",
-      "type": "electronics",
-      "id": 17
-    },
-    {
-      "name": "Watch SE with Aluminum Case",
-      "description": "Отслеживайте все свои любимые тренировки, такие как плавание, бег, пилатес и тай-чи,Проверяйте пульс в любое время и получайте данные о показателях пульса,Помощь при обнаружении падений или при вызове SOS, даже если вы за границей,В 2 раза более быстрый процессор, чем в модели Series 3",
-      "price": 310,
-      "picture": "https://www.istore.kg/media/products/MKU83_VW_34FRwatch-40-alum-spacegray-nc-se_VW_34FR_WF_CO.webp",
-      "type": "electronics",
-      "id": 18
-    },
-    {
-      "name": "AirPods Max",
-      "description": "Чип Apple H1 в каждой чашке наушников, отвечающий за рендеринг аудио и стабильное подключение,Пространственное аудио с динамическим отслеживанием головы,Активное шумоподавление и Режим прозрачности,Умный чехол-бюстгальтер с запасом прочности",
-      "price": 550,
-      "picture": "https://www.istore.kg/media/products/AirPods-Max-Blue.webp",
-      "type": "electronics",
-      "id": 19
-    },
-    {
       "name": "AirPods Pro",
       "description": "Чип Apple H1 отвечающий за рендеринг аудио и стабильное подключение,Активное шумоподавление и Режим прозрачности,Пространственное аудио с динамическим отслеживанием головы,Кейс с поддержкой беспроводной зарядки и MagSafe",
       "price": 225,
       "picture": "https://www.istore.kg/media/products/AirPods-Pro-1.webp",
       "type": "electronics",
       "id": 20
-    },
-    {
-      "name": "AirPods 3 with Wireless Charging Case",
-      "description": "Чип Apple H1 отвечающий за рендеринг аудио и стабильное подключение, рендеринг аудио и стабильное подключение,Пространственное аудио с динамическим отслеживанием головы,До 30 часов работы в режиме прослушивания с зарядным чехлом,Кейс с поддержкой беспроводной зарядки и MagSafe",
-      "price": 190,
-      "picture": "https://www.istore.kg/media/products/MME73_AV2.webp",
-      "type": "electronics",
-      "id": 21
-    },
-    {
-      "name": "AirPods 2 with Charging Case",
-      "description": "Чип Apple H1 отвечающий за рендеринг аудио и стабильное подключение,До 24 часов работы в режиме прослушивания с зарядным чехлом,Функция 'привет siri'бОбычный кейс, заряжаемый кабелем Lightning",
-      "price": 140,
-      "picture": "https://www.istore.kg/media/products/AirPods-1.webp",
-      "type": "electronics",
-      "id": 22
     },
     {
       "name": "Apple TV 4K (2021)",
@@ -215,14 +55,6 @@
       "picture": "https://www.istore.kg/media/products/dji-fpv-fly-more-kit-1.webp",
       "type": "electronics",
       "id": 28
-    },
-    {
-      "name": "Parrot Bebop Drone 2",
-      "description": "Квадрокоптер Parrot Bebop Drone 2 - лёгкий, компактный, простой в использовании квадрокоптер, оснащённый видеокамерой. Это первый любительский квадрокоптер в весовой категории 500 грамм со временем автономной работы 25 минутУправляйте квадрокоптером с Вашего смартфона или планшета. Простота в управлении: Интерфейс Bebop 2 оснащен акселерометром и сенсорным управлением, благодаря чему он может моментально реагировать на движения вашего смартфона/планшета. Всего одно прикосновение, и ваш дрон уже в небе или снова на земле, пилотировать квадрокоптер никогда не было так просто.",
-      "price": 350,
-      "picture": "https://www.istore.kg/media/products/bebop-1.webp",
-      "type": "electronics",
-      "id": 29
     },
     {
       "name": "GoPro HERO10 Black",

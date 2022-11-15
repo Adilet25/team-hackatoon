@@ -30,7 +30,6 @@ const ProductContextProvider = ({ children }) => {
   const location = useLocation();
 
   const getProducts = async () => {
-    console.log(window.location.search);
     const { data } = await axios(
       `${JSON_API_PRODUCTS}/${window.location.search}`
     );

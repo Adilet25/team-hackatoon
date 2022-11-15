@@ -4,10 +4,10 @@
   margin-left: 2rem;
   margin-top: 2rem;
   width: 20%;
-  transition: 1s;
+  transition: 1s !important;
 }
 .containerCard:hover {
-  transform: scale(1.1);
+  transform: scale(1.1) !important;
 }
 
 .cardBlock {
@@ -55,4 +55,12 @@
 .cardButtons_details:hover {
   color: #544856;
   font-weight: bold;
+}
+
+.pagination {
+  width: 90vw;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
 }

@@ -32,12 +32,13 @@ const AuthoContextProvider = ({ children }) => {
     }
     localStorage.setItem("user", JSON.stringify(finduser));
     naviagte("/");
+    getUserFromLs();
   }
 
   function getUserFromLs() {
     let user = JSON.parse(localStorage.getItem("user"));
     setOneUserFromLs(user);
-    console.log(oneUserFromLs);
+    // console.log(oneUserFromLs);
   }
 
   function logout() {

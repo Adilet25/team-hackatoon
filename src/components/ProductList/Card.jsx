@@ -9,6 +9,9 @@ import AddShoppingCart from "@mui/icons-material/AddShoppingCart";
 import { Pagination } from "@mui/material";
 import ProductList from "./ProductList";
 import "../../styles/Card.css";
+import "../../styles/Navbar.css";
+import Like from "./Like";
+
 const Card = props => {
   const API = " http://localhost:8000/products";
   // const [, setProducts] = useState([]);
@@ -27,6 +30,8 @@ const Card = props => {
   const { getProducts, products } = useProducts();
 
   const navigate = useNavigate();
+
+  const [like, setLike] = useState(false);
 
   useEffect(() => {
     getProducts();
@@ -94,13 +99,21 @@ const Card = props => {
                   onClick={() => addProductToCart(item)}>
                   <AddShoppingCart className="Icon" />
                 </button>
+                <button className="cardButtons">
+                  <Like className="Icon" />
+                </button>
               </div>
             </div>
           </div>
         </div>
       ))}
       <div className="pagination">
-        <Pagination count={count} page={page} onChange={handlePage} />
+        <Pagination
+          count={count}
+          page={page}
+          onChange={handlePage}
+          class="pagination"
+        />
       </div>
     </>
   );

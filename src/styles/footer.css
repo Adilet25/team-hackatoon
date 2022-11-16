@@ -7,12 +7,13 @@
   justify-content: space-around;
   color: white;
   align-items: center;
-  margin-bottom: 0;
+  /* margin-bottom: 0; */
   margin-top: 3rem;
   box-shadow: 0px -2px 10px gray;
   bottom: 0;
   left: 0;
   right: 0;
+  position: fixed;
   /* position: fixed; */
 }
 /* 
@@ -37,3 +38,10 @@
   color: "white",
   alignItems: "center",
   }} */
+
+@media (max-width: 376px) {
+  .footerEnd {
+    width: 425px;
+    font-size: 11px;
+  }
+}

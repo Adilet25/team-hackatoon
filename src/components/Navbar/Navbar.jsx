@@ -23,7 +23,7 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { useAutho } from "../Authorization/AuthoConetextProvider";
 import { Logout } from "@mui/icons-material";
 import { useProducts } from "../../context/ProductContextProvider";
-
+import FilterProduct from "../FilterProduct/FilterProduct";
 const pages = [
   {
     type: "Products",
@@ -120,6 +120,14 @@ function ResponsiveAppBar({ setPage }) {
   //   render();
   // }, [search]);
   // console.log(oneUserFromLs.name[0]);
+  // <button
+  //   onClick={() => {
+  //     addProduct(product);
+  //     navigate("/products");
+  //   }}
+  //   className="addButton">
+  //   Save
+  // </button>;
 
   return (
     <AppBar
@@ -128,9 +136,10 @@ function ResponsiveAppBar({ setPage }) {
       data-aos-duration="1500"
       position="static"
       style={{ backgroundColor: "#FFFBFB", color: "#544856" }}>
-      <Container maxWidth="xl">
+      <Container maxWidth="xl" className="navbar">
         <Toolbar disableGutters>
           <StorefrontSharpIcon
+            className="storeIcon"
             sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}
           />
           <Typography
@@ -138,7 +147,7 @@ function ResponsiveAppBar({ setPage }) {
             noWrap
             component="button"
             // href="/?q="
-            className="buttonHome-link"
+            className="  storeIcon buttonHome-link"
             onClick={() => navigate("/")}
             sx={{
               mr: 2,
@@ -178,19 +187,13 @@ function ResponsiveAppBar({ setPage }) {
               sx={{
                 display: { xs: "block", md: "none" },
               }}>
-              {pages.map(page => (
-                <MenuItem key={page.id} onClick={handleCloseNavMenu}>
-                  <Typography
-                    textAlign="center"
-                    onClick={() => navigate(page)}></Typography>
-                </MenuItem>
-              ))}
+              <FilterProduct />
             </Menu>
           </Box>
           <StorefrontSharpIcon
             sx={{ display: { xs: "flex", md: "none" }, mr: 1 }}
           />
-          <Typography
+          {/* <Typography
             variant="h5"
             noWrap
             component="a"
@@ -206,9 +209,9 @@ function ResponsiveAppBar({ setPage }) {
               textDecoration: "none",
             }}>
             Online Store
-          </Typography>
+          </Typography> */}
           {/* Navigate Buttons */}
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+          {/* <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map(page => (
               <Button
                 key={page.id}
@@ -217,75 +220,89 @@ function ResponsiveAppBar({ setPage }) {
                 {page.type}
               </Button>
             ))}
-          </Box>
-
-          {/* Search Box */}
-          <Box className="searchBlock">
-            <SearchIcon />
-            <input
-              className="inputSearch"
-              type="text"
-              onChange={e => setSearch(e.target.value)}
-              value={search}
-              required
-              placeholder="Search"
-            />
-          </Box>
-          {/* Profile Icon */}
-          <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar
-                  alt={oneUserFromLs && oneUserFromLs.name[0]}
-                  src="..."
-                />
-              </IconButton>
-            </Tooltip>
-            <Menu
-              sx={{ mt: "45px" }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}>
-              {settings.map(setting => (
-                <MenuItem key={setting.id} onClick={handleCloseUserMenu}>
+          </Box> */}
+          <div className="filterProduct">
+            <FilterProduct />
+          </div>
+          <div className="navbarBlock2">
+            {/* Search Box */}
+            <Box className="searchBlock">
+              <SearchIcon />
+              <input
+                className="inputSearch"
+                type="text"
+                onChange={e => setSearch(e.target.value)}
+                value={search}
+                required
+                placeholder="Search"
+              />
+            </Box>
+            {/* Profile Icon */}
+            <Box sx={{ flexGrow: 0 }}>
+              <Tooltip title="Open settings">
+                <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+                  <Avatar
+                    alt={oneUserFromLs && oneUserFromLs.name[0]}
+                    src="..."
+                  />
+                </IconButton>
+              </Tooltip>
+              <Menu
+                sx={{ mt: "45px" }}
+                id="menu-appbar"
+                anchorEl={anchorElUser}
+                anchorOrigin={{
+                  vertical: "top",
+                  horizontal: "right",
+                }}
+                keepMounted
+                transformOrigin={{
+                  vertical: "top",
+                  horizontal: "right",
+                }}
+                open={Boolean(anchorElUser)}
+                onClose={handleCloseUserMenu}>
+                {settings.map(setting => (
+                  <MenuItem key={setting.id} onClick={handleCloseUserMenu}>
+                    <Typography
+                      textAlign="center"
+                      onClick={() => navigate(setting.path)}>
+                      {setting.type}
+                    </Typography>
+                  </MenuItem>
+                ))}
+                <MenuItem>
+                  <Typography onClick={() => logout()}>logout</Typography>
+                </MenuItem>
+                <MenuItem>
                   <Typography
-                    textAlign="center"
-                    onClick={() => navigate(setting.path)}>
-                    {setting.type}
+                    onClick={() =>
+                      deleteAccount(oneUserFromLs && oneUserFromLs.id)
+                    }>
+                    Delete Account
                   </Typography>
                 </MenuItem>
-              ))}
-              <MenuItem>
-                <Typography onClick={() => logout()}>logout</Typography>
-              </MenuItem>
-              <MenuItem>
-                <Typography
-                  onClick={() =>
-                    deleteAccount(oneUserFromLs && oneUserFromLs.id)
-                  }>
-                  Delete Account
-                </Typography>
-              </MenuItem>
-            </Menu>
-          </Box>
-          {/* Cart Icon */}
-          <Box style={{ color: "#431969", marginLeft: "50px" }}>
-            <Button
-              onClick={() => navigate("/cart")}
-              sx={{ my: 2, color: "white", display: "block" }}>
-              <ShoppingCartIcon />
-            </Button>
-          </Box>
+                <MenuItem>
+                  <Typography onClick={() => navigate("/add")}>
+                    Add product
+                  </Typography>
+                </MenuItem>
+              </Menu>
+            </Box>
+            {/* Cart Icon */}
+            <Box
+              className="cartButton"
+              style={{ color: "#431969", marginLeft: "50px" }}>
+              <Tooltip title="Open Cart">
+                <Button
+                  // className="cartButton"
+                  onClick={() => navigate("/cart")}
+                  sx={{ my: 2, color: "white", display: "block" }}>
+                  <ShoppingCartIcon />
+                </Button>
+              </Tooltip>
+            </Box>
+          </div>
         </Toolbar>
       </Container>
     </AppBar>

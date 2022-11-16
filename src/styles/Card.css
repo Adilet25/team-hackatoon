@@ -23,6 +23,8 @@
 .contentCard {
   display: flex;
   align-items: center;
+  margin-top: 2%;
+  margin-left: 2%;
 }
 
 .contentCard2 {
@@ -31,7 +33,8 @@
 }
 
 .cardImg_block {
-  width: 10vw;
+  width: 10vmax;
+  height: 10vmax;
 }
 
 .cardText {
@@ -62,5 +65,59 @@
   height: auto;
   display: flex;
   justify-content: center;
-  margin-top: 5%;
+  margin-top: 1%;
+  margin-bottom: 3%;
+}
+
+@media (max-width: 1024px) {
+  .cardImg_block {
+    width: 10vmax;
+    height: 10vmax;
+  }
+
+  .contentCard {
+    font-size: 15px;
+  }
+  .cardButtons {
+    width: 30px;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .containerCard {
+    width: 90%;
+  }
+
+  .cardImg_block {
+    width: 30vmax;
+    height: 30vmax;
+  }
+  .contentCard {
+    font-size: 20px;
+  }
+  .cardButtons {
+    width: 40px;
+    height: auto;
+  }
+}
+@media (max-width: 426px) {
+  .containerCard {
+    width: 90% !important;
+  }
+
+  .cardImg_block {
+    width: 20vmax;
+    height: 20vmax;
+  }
+  .contentCard {
+    font-size: 20px;
+  }
+  .cardButtons {
+    width: 40px;
+    height: auto;
+  }
+  .navbar {
+    width: 425px !important;
+  }
 }

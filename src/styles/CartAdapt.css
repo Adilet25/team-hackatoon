@@ -1,0 +1,63 @@
+.orderButton {
+  width: 5rem;
+  height: 2rem;
+  background-color: rgb(203, 203, 203);
+  border-radius: 20px;
+  border: 0;
+  transition: 0.6s;
+}
+
+.orderButton:hover {
+  background-color: #544856;
+  border: 2px;
+  transition: 0.8s;
+  color: white;
+}
+
+.gg2 {
+  margin-top: 2%;
+}
+
+.gg1 {
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.modalStyle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50vw;
+  background-color: rgb(219, 219, 219);
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /* position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  width: 400,
+  bgcolor: "background.paper",
+  border: "2px solid #000",
+  boxShadow: 24,
+  p: 4, */
+}
+
+@media (max-width: 376px) {
+  .css-11xur9t-MuiPaper-root-MuiTableContainer-root {
+    width: 113vw !important;
+  }
+}
+@media (max-width: 321px) {
+  .css-11xur9t-MuiPaper-root-MuiTableContainer-root {
+    width: 132vw !important;
+  }
+}
+
+.css-11xur9t-MuiPaper-root-MuiTableContainer-root {
+  margin-bottom: 200px !important;
+}

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ProductContextProvider from "../../context/ProductContextProvider.js";
 import { useProducts } from "../../context/ProductContextProvider.js";
+import "../../styles/addProduct.css";
 
 const AddProduct = () => {
   const navigate = useNavigate();
@@ -34,41 +35,59 @@ const AddProduct = () => {
 
   return (
     <>
-      <h2>Add Product</h2>
+      <div className="addProduct">
+        <h2>Add Product</h2>
 
-      <input type="text" placeholder="Title" name="name" onChange={handleInp} />
-      <br />
-      <input
-        type="text"
-        placeholder="Description"
-        name="description"
-        onChange={handleInp}
-      />
-      <br />
-      <input
-        type="number"
-        placeholder="Price"
-        name="price"
-        onChange={handleInp}
-      />
-      <br />
-      <input
-        type="text"
-        placeholder="Picture"
-        name="picture"
-        onChange={handleInp}
-      />
-      <br />
-      <input type="text" placeholder="Type" name="type" onChange={handleInp} />
-      <br />
+        <input
+          type="text"
+          placeholder="Title"
+          name="name"
+          onChange={handleInp}
+          className="addInput"
+        />
+        <br />
+        <input
+          type="text"
+          placeholder="Description"
+          name="description"
+          onChange={handleInp}
+          className="addInput"
+        />
+        <br />
+        <input
+          type="number"
+          placeholder="Price"
+          name="price"
+          onChange={handleInp}
+          className="addInput"
+        />
+        <br />
+        <input
+          type="text"
+          placeholder="Picture"
+          name="picture"
+          onChange={handleInp}
+          className="addInput"
+        />
+        <br />
+        <input
+          type="text"
+          placeholder="Type"
+          name="type"
+          onChange={handleInp}
+          className="addInput"
+        />
+        <br />
 
-      <button
-        onClick={() => {
-          addProduct(product);
-          navigate("/products");
-        }}>
-        Save
-      </button>
+        <button
+          onClick={() => {
+            addProduct(product);
+            navigate("/products");
+          }}
+          className="addButton">
+          Save
+        </button>
+      </div>
     </>
   );
 };

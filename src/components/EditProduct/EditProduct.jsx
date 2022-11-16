@@ -44,7 +44,7 @@ const EditProduct = () => {
           <div className="productDetails_main-block">
             <div className="editProduct_block">
               <h2>Edit Product</h2>
-              <h2>How it will be</h2>
+              <h2 className="editH2">How it will be</h2>
               <div className="editProduct_info-block">
                 <div className="editProduct_showNew">
                   <div>
@@ -62,7 +62,7 @@ const EditProduct = () => {
                   </div>
                 </div>
                 <div>
-                  <h2>Edit block</h2>
+                  <h2 className="editBlock">Edit block</h2>
                   <input
                     type="text"
                     value={product.name}

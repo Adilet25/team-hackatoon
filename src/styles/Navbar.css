@@ -34,3 +34,70 @@
   width: 15rem;
   transition: 1s;
 }
+
+.navbarBlock2 {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin-left: 500px;
+}
+
+@media (max-width: 1024px) {
+  .storeIcon {
+    display: none !important;
+  }
+  .navbarBlock2 {
+    margin-left: 250px;
+  }
+}
+@media (max-width: 768px) {
+  .inputSearch {
+    width: 8rem;
+    height: 2rem;
+  }
+  .inputSearch:focus {
+    width: 9rem;
+    transition: 1s;
+  }
+}
+@media (max-width: 426px) {
+  .navbarBlock2 {
+    margin-left: 5px;
+  }
+}
+
+@media (max-width: 426px) {
+  .inputSearch {
+    margin-right: 15px !important;
+  }
+  .cartButton {
+    margin-left: 0px !important;
+  }
+}
+
+@media (max-width: 376px) {
+  .inputSearch {
+    margin-right: 15px !important;
+  }
+  .cartButton {
+    margin-left: 0px !important;
+  }
+  .pagination {
+    width: 100vw;
+  }
+  .css-hip9hq-MuiPaper-root-MuiAppBar-root {
+    background-color: transparent !important;
+    box-shadow: none !important;
+  }
+}
+
+@media (max-width: 320px) {
+  .pagination {
+    width: 60vmax;
+  }
+}
+@media (max-width: 769px) {
+  .filterProduct {
+    display: none !important;
+  }
+}

@@ -1,0 +1,26 @@
+* {
+  font-family: "Jost", sans-serif !important;
+}
+/* .filterBlock {
+  display: flex;
+  flex-direction: row;
+} */
+.PrivateSwitchBase-root {
+  display: none !important;
+}
+.css-dmmspl-MuiFormGroup-root {
+  display: flex;
+  flex-direction: row !important;
+  font-size: 2rem;
+  flex-wrap: nowrap !important;
+}
+.filterButtons {
+  border-radius: 5px !important;
+  font-size: 1.35rem !important;
+  font-weight: bold !important;
+  transition: 0.7s !important;
+}
+.filterButtons:hover {
+  transition: 0.8s !important;
+  background-color: rgb(211, 211, 211) !important;
+}

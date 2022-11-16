@@ -6,6 +6,7 @@ import { BrowserRouter } from "react-router-dom";
 import CartContextProvider from "./components/Cart/CartContextProvider";
 import AuthoContextProvider from "./components/Authorization/AuthoConetextProvider";
 import ProductContextProvider from "./context/ProductContextProvider";
+// import "bootstrap/dist/css/bootstrap.min.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

@@ -1,46 +1,6 @@
 {
   "products": [
     {
-      "name": "AirPods Pro",
-      "description": "Чип Apple H1 отвечающий за рендеринг аудио и стабильное подключение,Активное шумоподавление и Режим прозрачности,Пространственное аудио с динамическим отслеживанием головы,Кейс с поддержкой беспроводной зарядки и MagSafe",
-      "price": 225,
-      "picture": "https://www.istore.kg/media/products/AirPods-Pro-1.webp",
-      "type": "electronics",
-      "id": 20
-    },
-    {
-      "name": "Apple TV 4K (2021)",
-      "description": "A12 Bionic с 64-битной архитектурой,Siri Remote для точного управления,Вещания в формате 4K и HDRDolby Vision и Dolby Atmos",
-      "price": 230,
-      "picture": "https://www.istore.kg/media/products/apple-tv-4k-5th-1_2xQxn0L.webp",
-      "type": "electronics",
-      "id": 23
-    },
-    {
-      "name": "Mount for Apple TV",
-      "description": "TotalMount - это гибкая система крепления, которая прикрепляет Apple TV непосредственно к задней панели вашего телевизора, упрощая установку и устраняя беспорядок в зоне просмотра телевизора. TotalMount особенно полезен для настенных телевизоров, поскольку он размещает Apple TV рядом с портом HDMI, избавляя от необходимости прокладывать кабель HDMI через стену",
-      "price": 40,
-      "picture": "https://www.istore.kg/media/products/mount1_iqSTNxY.jpeg",
-      "type": "electronics",
-      "id": 24
-    },
-    {
-      "name": "DJI Air 2S Fly More Combo",
-      "description": "Дюймовая матрица,Передача FHD до 12 км,Видео до 5.4K,Чувствительность к препятствиям в 4 направлениях",
-      "price": 1350,
-      "picture": "https://www.istore.kg/media/products/dji-air-2s-fly-more-combo-1.webp",
-      "type": "electronics",
-      "id": 25
-    },
-    {
-      "name": "DJI Phantom 4 Advanced",
-      "description": "белый красивый дрон",
-      "price": 800,
-      "picture": "https://www.istore.kg/media/products/phantom-4-advanced.webp",
-      "type": "electronics",
-      "id": 26
-    },
-    {
       "name": "DJI FPV",
       "description": "Погружение в атмосферу полета,Передача HD видео с низкой задержкой,4K при 60 кадров в секунду и широкое поле зрения,Интуитивный контроллер движения",
       "price": 1200,
@@ -329,14 +289,6 @@
       "id": 65
     },
     {
-      "name": "Magic Keyboard with Numeric Keypad",
-      "description": "У клавиатуры Magic Keyboard с цифровой панелью расширенная раскладка с дополнительными клавишами навигации для быстрой прокрутки документов и полноразмерными клавишами-стрелками для игр.",
-      "price": 165,
-      "picture": "https://www.istore.kg/media/products/MQ052_jK6FToQ.webp",
-      "type": "electronics",
-      "id": 66
-    },
-    {
       "name": "iPad 10.2",
       "description": "Чип A13 Bionic с Neural Engine делает все ваши действия более отзывчивыми. 10,2-дюймовый дисплей Retina с функцией True Tone для невероятной детализации и ярких цветов. Touch ID встроен в кнопку Home для безопасной аутентификации и Apple Pay. Быстрое соединение с Wi-Fi 802.11ac и сотовой связью LTE гигабитного класса",
       "price": 380,
@@ -371,7 +323,7 @@
     {
       "name": "AIR JORDAN RETRO 2",
       "description": "The Maison Chateau Rouge x Air Jordan 2 is one of the many outstanding collaborative editions of the classic Air Jordan model that released in 2022.",
-      "price": 309,
+      "price": 310,
       "picture": "https://img.stadiumgoods.com/18/64/75/84/18647584_40493519_2048.jpg",
       "type": "clothes",
       "id": 73

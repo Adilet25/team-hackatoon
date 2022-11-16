@@ -15,9 +15,16 @@ const AuthoContextProvider = ({ children }) => {
   const naviagte = useNavigate();
 
   async function addUserToDb(user) {
+    let { data } = await axios(API);
+    let finduser = data.find(item => item.name == user.name);
+    if (finduser) {
+      naviagte("/register");
+      return alert("Username занят!");
+    }
     await axios.post(`${API}`, user);
     users.push(user);
     setUsers(users);
+    naviagte("/login");
   }
 
   async function getUserFromDb(user) {

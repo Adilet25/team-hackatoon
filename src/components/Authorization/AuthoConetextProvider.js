@@ -7,10 +7,11 @@ export const authoContextProvider = React.createContext();
 export const useAutho = () => useContext(authoContextProvider);
 
 const AuthoContextProvider = ({ children }) => {
-  const API = "http://localhost:8001/users";
+  const API = "  http://localhost:8001/users";
 
   const [users, setUsers] = useState([]);
   const [oneUserFromLs, setOneUserFromLs] = useState(null);
+  const [isAdmin, setIsAdmin] = useState(false);
 
   const naviagte = useNavigate();
 
@@ -67,12 +68,15 @@ const AuthoContextProvider = ({ children }) => {
       value={{
         // leter: leter,
         oneUserFromLs: oneUserFromLs,
+        isAdmin: isAdmin,
+        users: users,
 
         addUserToDb,
         getUserFromDb,
         getUserFromLs,
         logout,
         deleteAccount,
+        setIsAdmin,
       }}>
       {children}
     </authoContextProvider.Provider>

@@ -10,7 +10,7 @@ import Card from "./Card";
 import { render } from "@testing-library/react";
 
 const ProductList = () => {
-  const API = " http://localhost:8000/products";
+  const API = "http://localhost:8000/products";
 
   const [products, setProducts] = useState([]);
   const [page, setPage] = useState(1);

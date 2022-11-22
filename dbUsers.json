@@ -3,72 +3,8 @@
     {
       "name": "Aidin",
       "password": "123",
+      "isAdmin": true,
       "id": 1
-    },
-    {
-      "name": "Task 1",
-      "password": "999",
-      "id": 2
-    },
-    {
-      "name": "",
-      "password": "",
-      "id": 3
-    },
-    {
-      "name": "GGG",
-      "password": "777",
-      "id": 4
-    },
-    {
-      "name": "Kok",
-      "password": "123",
-      "id": 5
-    },
-    {
-      "name": "уцаур",
-      "password": "7н7н",
-      "id": 7
-    },
-    {
-      "name": "POP",
-      "password": "123",
-      "id": 8
-    },
-    {
-      "name": "HHH",
-      "password": "123",
-      "id": 9
-    },
-    {
-      "name": "GGG",
-      "password": "123",
-      "id": 10
-    },
-    {
-      "name": "ewfew",
-      "password": "ewfwefewf",
-      "id": 11
-    },
-    {
-      "name": "ewfe",
-      "password": "ewfewfwe",
-      "id": 12
-    },
-    {
-      "name": "XXX",
-      "password": "555",
-      "id": 13
-    },
-    {
-      "name": "eewfwefwe",
-      "password": "6757567",
-      "id": 14
-    },
-    {
-      "name": "qwdqwd",
-      "password": "qwdqwdwq",
-      "id": 15
     }
   ]
 }

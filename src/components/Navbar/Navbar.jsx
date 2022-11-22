@@ -90,7 +90,8 @@ function ResponsiveAppBar({ setPage }) {
   const API = " http://localhost:8000/products";
   const [products, setProducts] = useState([]);
 
-  const { oneUserFromLs, getUserFromLs, logout, deleteAccount } = useAutho();
+  const { oneUserFromLs, getUserFromLs, logout, deleteAccount, isAdmin } =
+    useAutho();
   const { getProducts } = useProducts();
 
   // async function render() {
@@ -282,11 +283,13 @@ function ResponsiveAppBar({ setPage }) {
                     Delete Account
                   </Typography>
                 </MenuItem>
-                <MenuItem>
-                  <Typography onClick={() => navigate("/add")}>
-                    Add product
-                  </Typography>
-                </MenuItem>
+                {oneUserFromLs ? (
+                  <MenuItem>
+                    <Typography onClick={() => navigate("/add")}>
+                      Add product
+                    </Typography>
+                  </MenuItem>
+                ) : null}
               </Menu>
             </Box>
             {/* Cart Icon */}

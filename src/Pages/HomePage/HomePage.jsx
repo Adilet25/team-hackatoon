@@ -9,9 +9,9 @@
 // import { ClassNames } from "@emotion/react";
 
 // const HomePage = () => {
-//   const API = " http://localhost:8000/products";
+//   const API = " https:/fake-products-backend.herokuapp.com/products";
 
-//   const USERS_API = "http://localhost:8001/users";
+//   const USERS_API = "https://users-fake-backend.herokuapp.com/users";
 
 //   const [products, setProducts] = useState([]);
 //   const { addProductToCart } = useCart();

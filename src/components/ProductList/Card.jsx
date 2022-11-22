@@ -11,12 +11,15 @@ import ProductList from "./ProductList";
 import "../../styles/Card.css";
 import "../../styles/Navbar.css";
 import Like from "./Like";
+import { useAutho } from "../Authorization/AuthoConetextProvider";
 
 const Card = props => {
-  const API = " http://localhost:8000/products";
+  const API = "http://localhost:8000/products";
   // const [, setProducts] = useState([]);
   const { addProductToCart } = useCart();
   const { deleteProduct } = useProducts();
+
+  const { oneUserFromLs, getUserFromLs } = useAutho();
 
   const [page, setPage] = useState(1);
 
@@ -51,7 +54,15 @@ const Card = props => {
     const end = begin + itemOnPage;
     return products.slice(begin, end);
   }
-  // console.log(props.currentData);
+
+  // useEffect(() => {
+  //   getUserFromLs();
+  //   // console.log(oneUserFromLs.isAdmin);
+  // }, []);
+
+  useEffect(() => {
+    getUserFromLs();
+  }, []);
 
   return (
     <>
@@ -78,30 +89,35 @@ const Card = props => {
             </div>
             <div className="face face2">
               <div className="contentCard2">
-                {/* onClick={() => navigate(`/details/${item.id}`)} */}
                 <h3>Price:{item.price}</h3>
-                {/* onClick={() => navigate(`/edit/${item.id}`)} */}
-
-                <button
-                  className="cardButtons"
-                  onClick={() => navigate(`/edit/${item.id}`)}>
-                  <EditIcon className="Icon" />
-                </button>
-                {/* onClick={() => deleteProduct(item.id)} */}
-                <button
-                  className="cardButtons"
-                  onClick={() => deleteProduct(item.id)}>
-                  <DeleteIcon className="Icon" />
-                </button>
-                {/* onClick={() => addProductToCart(item)} */}
-                <button
-                  className="cardButtons"
-                  onClick={() => addProductToCart(item)}>
-                  <AddShoppingCart className="Icon" />
-                </button>
-                <button className="cardButtons">
-                  <Like className="Icon" />
-                </button>
+                {oneUserFromLs && oneUserFromLs.isAdmin ? (
+                  <div>
+                    <button
+                      className="cardButtons"
+                      onClick={() => navigate(`/edit/${item.id}`)}>
+                      <EditIcon className="Icon" />
+                    </button>
+                    <button
+                      className="cardButtons"
+                      onClick={() => deleteProduct(item.id)}>
+                      <DeleteIcon className="Icon" />
+                    </button>
+                    <button
+                      className="cardButtons"
+                      onClick={() => addProductToCart(item)}>
+                      <AddShoppingCart className="Icon" />
+                    </button>
+                    <button className="cardButtons">
+                      <Like className="Icon" />
+                    </button>
+                  </div>
+                ) : (
+                  <button
+                    className="cardButtons"
+                    onClick={() => addProductToCart(item)}>
+                    <AddShoppingCart className="Icon" />
+                  </button>
+                )}
               </div>
             </div>
           </div>
@@ -112,7 +128,7 @@ const Card = props => {
           count={count}
           page={page}
           onChange={handlePage}
-          class="pagination"
+          className="pagination"
         />
       </div>
     </>

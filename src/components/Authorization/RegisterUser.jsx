@@ -6,7 +6,7 @@ import "../../styles/register.css";
 const RegisterUser = () => {
   //! бро, потом эту фунцию  подстрой под себя , по кнопкам поставь
 
-  const { addUserToDb } = useAutho();
+  const { addUserToDb, isAdmin, setIsAdmin } = useAutho();
 
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
@@ -20,6 +20,7 @@ const RegisterUser = () => {
       let user = {
         name,
         password,
+        isAdmin,
       };
       addUserToDb(user);
       setPassword("");
@@ -44,6 +45,16 @@ const RegisterUser = () => {
         onChange={e => setPassword(e.target.value)}
         value={password}
       />
+      <div className="adminBlock">
+        <h3 className="admin_checkbox">
+          ADMIN
+          <input
+            className="checkbox"
+            type="checkbox"
+            onChange={e => setIsAdmin(true)}
+          />
+        </h3>
+      </div>
       <button onClick={() => createUser()} className="registerBotton">
         Register
       </button>

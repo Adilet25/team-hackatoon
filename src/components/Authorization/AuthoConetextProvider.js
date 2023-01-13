@@ -7,7 +7,7 @@ export const authoContextProvider = React.createContext();
 export const useAutho = () => useContext(authoContextProvider);
 
 const AuthoContextProvider = ({ children }) => {
-  const API = "  http://localhost:8001/users";
+  const API = "https://users-json.onrender.com/users";
 
   const [users, setUsers] = useState([]);
   const [oneUserFromLs, setOneUserFromLs] = useState(null);
